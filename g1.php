@@ -10,13 +10,17 @@
     <?php
 //group project 1
 if(isset($_POST["convert"])){
+    //get value of user's input
     $degree =  $_POST ['degree'];
     $choice =  $_POST ['choice'];
+    //check if it's empty
     if(empty($degree)) {
         echo 'Please enter degree to convert!';
+        //check if it's numeric
     }else if (!is_numeric($degree)){
         echo 'Please enter valid degree!';
     }else{
+        //do actions according to user's choices
         switch ($choice)
         {
             case "fc":
@@ -51,6 +55,7 @@ if(isset($_POST["convert"])){
     }
     
 }else{
+    // get user input using a form
     echo '
         <form action="" method="POST">
             Please enter degrees to convert:<input type="text" name="degree" /><br />
