@@ -1,7 +1,7 @@
 
  <?php
 // Martin adds h1 tag to top of page.
-<h1>Tempurature Conversion</h1>
+<h1>Tempurature Conversions</h1>
 //group project 1
 if(isset($_POST["convert"])){
     //get value of user's input
