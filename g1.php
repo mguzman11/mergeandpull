@@ -12,7 +12,7 @@ if(isset($_POST["convert"])){
         echo 'Please enter degree to convert!';
         //check if it's numeric
     }else if (!is_numeric($degree)){
-        echo 'Please enter valid degree!';
+        echo 'Please enter valid number!';
     }else{
         //do actions according to user's choices
         switch ($choice)
@@ -42,7 +42,7 @@ if(isset($_POST["convert"])){
                 echo $degree . '&deg Kelvin = ' . $value . '&deg Celsius';
                 break;
             default:
-                echo 'Please select a convert option!';
+                echo 'Please select a conversion option!';
                 break;
         }
 
@@ -52,9 +52,9 @@ if(isset($_POST["convert"])){
     // get user input using a form
     echo '
         <form action="" method="POST">
-            Please enter degrees to convert:<input type="text" name="degree" /><br />
+            Please enter number of degrees to convert:<input type="text" name="degree" /><br />
             <fieldset>
-                <legend>Please select an option to convert degrees</legend>
+                <legend>Please select an option for conversion</legend>
                 <p><input type="radio" name="choice" value="fc" />Fahrenheit to Celsius<br /></p>
                 <p><input type="radio" name="choice" value="cf" />Celsius to Fahrenheit<br /><br /></p>
                 <p><input type="radio" name="choice" value="fk" />Fahrenheit to Kelvin<br /></p>
